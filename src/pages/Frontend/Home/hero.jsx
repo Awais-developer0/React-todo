@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="container flex-center">
                 <Row>
                     <Col>
-                        <Title level={1}>Todo-About</Title>
+                        <Title level={1}>Todo-Home</Title>
                         <Title level={2}>Full Name:{user.fullName}</Title>
                         <Title level={2}>UID:{user.uid}</Title>
                         <Title level={2}>Email:{user.email}</Title>
