@@ -51,7 +51,7 @@ const Login = () => {
 							<Input.Password size="large" placeholder="Enter Your Password" name='password' onChange={handleChange} required />
 						</Item>
 
-						<Button size='large' type='primary' block htmlType='submit' loading={isProcessing} onClick={handleLogin}>Register</Button>
+						<Button size='large' type='primary' block htmlType='submit' loading={isProcessing} onClick={handleLogin}>Login</Button>
 
 					</Form>
 

@@ -4,6 +4,7 @@ import About from './About'
 import Contact from './Contact'
 import Header from '../../components/Header'
 import Footer from "../../components/Footer"
+import Todos from '../Dashboard/Todos/index'
 
 const Frontend = () => {
     return (
@@ -13,6 +14,7 @@ const Frontend = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='about' element={<About />} />
                 <Route path='contact' element={<Contact />} />
+                <Route path='todos/*' element={<Todos />} />
             </Routes>
             <Footer />
         </>
