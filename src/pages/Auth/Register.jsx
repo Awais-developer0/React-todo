@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Typography, Form, Input, Button } from "antd"
 import { useState } from 'react'
 import Password from 'antd/es/input/Password'
@@ -8,7 +8,7 @@ const initialState = { fullName: "", email: "", password: "", confirmPassword: "
 const Register = () => {
 	const [state, setState] = useState(initialState)
 	const [isProcessing, setIsProcessing] = useState(false)
-
+	const navigate = useNavigate()
 	const handleChange = e => setState(s => ({ ...state, [e.target.name]: e.target.value }))
 	const handleRegister = () => {
 
@@ -42,6 +42,7 @@ const Register = () => {
 		setTimeout(() => {
 			setIsProcessing(false)
 			window.toastify("A new user successfully registered", "success")
+			navigate("/auth/login")
 		}, 500)
 	}
 	return (

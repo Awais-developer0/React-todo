@@ -14,6 +14,13 @@ const App = () => {
         token: {
           colorPrimary: "#1d3557",
         },
+        components: {
+          Button: {
+            primaryShadow: "none",
+            defaultShadow: "none",
+            dangerShadow: "none",
+          },
+        },
       }}
     >
       {!isAppLoading ? <AppRoutes /> : <ScreenLoader />}

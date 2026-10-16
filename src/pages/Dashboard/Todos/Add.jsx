@@ -52,7 +52,7 @@ const Add = () => {
             setIsProcessing(false)
             setState(initialState) // Form reset ho gaya
             window.toastify("A new todo created successfully", "success")
-            navigate("/") // List wale page par redirect
+            navigate("/todos") // List wale page par redirect
         }, 500)
     }
 
@@ -60,15 +60,17 @@ const Add = () => {
         <main className="auth flex-center">
             <div className="container">
                 <div className="card mx-auto p-3">
-                    <Title level={1} className="text-center">
-                        Add Todo
-                    </Title>
+                    <div className="d-flex align-items-cneter justify-content-between mb-4">
+                        <Title level={2} className="text-center">Add Todo</Title>
+                        <Button type='primary' onClick={() => { navigate("/todos") }}>All todos</Button>
+                    </div>
+
                     <Form layout="vertical" onFinish={handleAddTodo}>
 
                         <Item label="Title">
                             <Input
                                 type="text"
-                                size="large"
+
                                 placeholder="Enter title"
                                 name='title'
                                 value={state.title}
@@ -81,7 +83,7 @@ const Add = () => {
                             <DatePicker
                                 placeholder='Select due date'
                                 className='w-100'
-                                size='large'
+
                                 onChange={(date, dateString) => setState(s => ({ ...s, dueDate: dateString }))}
                             />
                         </Item>
@@ -100,7 +102,7 @@ const Add = () => {
                         <Item label="Priority">
                             <Select
                                 placeholder="Select your priority"
-                                size='large'
+
                                 value={state.priority || undefined}
                                 onChange={value => setState(s => ({ ...s, priority: value }))}
                             >
@@ -111,7 +113,7 @@ const Add = () => {
                         </Item>
 
                         <Button
-                            size='large'
+
                             type='primary'
                             block
                             htmlType='submit'

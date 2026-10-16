@@ -17,6 +17,8 @@ const Navbar = () => {
                             <li className="nav-item"><Link to="/" className="nav-link text-white">Home</Link></li>
                             <li className="nav-item"><Link to="/about" className="nav-link text-white">About</Link></li>
                             <li className="nav-item"><Link to="/contact" className="nav-link text-white">Contact</Link></li>
+                            <li className="nav-item"><Link to="/todos/add" className="nav-link text-white">Add Todo</Link></li>
+                            <li className="nav-item"><Link to="/todos" className="nav-link text-white">All Todos</Link></li>
 
                         </ul>
                         <div className="d-flex">
